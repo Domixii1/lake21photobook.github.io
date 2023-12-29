@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake 21 - Photobook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>@media (max-width: 768px) {
+        .jumbotron {
+            height: 250px;
+        }
+        .jumbotron h1 {
+            font-size: 24px;
+        }
+        .preview-img {
+            max-width: 100%;
+            height: auto;
+        }
+        .buy-now-button {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        .disclaimer, .footer p {
+            font-size: 10px;
+        }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: rgb(9, 83, 180);
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: rgb(206, 186, 186);
+        }
+
+        .jumbotron {
+            background: url('path/to/cover-image.jpg') no-repeat center center;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jumbotron h1 {
+            color: #000080;
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+        }
+
+        .preview-img {
+            max-height: 200px;
+            width: auto;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .buy-now-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now-button:hover {
+            background-color: #218838;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .language-selector {
+            text-align: right;
+            padding: 10px;
+        }
+
+        .flag-icon {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <span onclick="switchLanguage('it')">
+            <img src="images/italian-flag.jpg.jpg" class="flag-icon" alt="IT"> IT
+        </span>
+        |
+        <span onclick="switchLanguage('en')">
+            <img src="images/us-flag.jpg.jpg" class="flag-icon" alt="EN"> EN
+        </span>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Lake 21 Photobook</a>
+            <!-- Add navbar links if needed -->
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Lake 21</h1>
+            <p class="lead">Lake 21 è un ebook fotografico straordinario che cattura la magica essenza della bellezza naturale e umana in una collezione affascinante. Questo photobook esclusivo presenta una serie di 40 fotografie mozzafiato, ognuna con la sua unica narrazione visiva, che ritraggono modelle in ambientazioni serene e pittoresche in riva a un lago. Ogni fotografia in Lake 21 è un capolavoro a sé, che esplora la relazione simbiotica tra donna e natura. Le modelle sono ritratte in pose che variano dal giocoso, al contemplativo e vivace, catturando una gamma di emozioni che risuonano con chiunque apprezzi la bellezza in tutte le sue forme. ACQUISTA ORA E NON TE NE PENTIRAI !!!!</p>
+            <p class="lead2">STRUTTURA: Il Photobook contiene un totale di 40 pagine con illustrazioni meravigliose, rendilo tuo, non perdere questa fantastica occasione !!!</p>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/image1.jpg.jpg" class="preview-img" alt="Anteprima 1">
+            </div>
+            <div class="col-md-4">
+                <img src="images/image2.jpg.jpg" class="preview-img" alt="Anteprima 1">
+            </div>
+            <div class="col-md-4">
+                <img src="images/image3.jpg.jpg" class="preview-img" alt="Anteprima 1">
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="buy-now-button">Acquista Ora: 38 EUR</button>
+        </div>
+
+        <div class="disclaimer mt-4">
+            <p>&copy; Onnishenza - Tutti i diritti riservati. Nessun rimborso disponibile per questo prodotto.</p>© Onnishenza - All rights reserved. No refunds available for this product.</p>
+        </div>
+    </div>
+
+    <footer class="footer mt-4">
+        <div class="container">
+            <p>&copy; 2023 Lake 21 Photobook. Tutti i diritti riservati / All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function switchLanguage(lang) {
+            // Esempio di come cambiare il testo in base alla lingua selezionata
+            if (lang === 'it') {
+                document.querySelector('.jumbotron h1').textContent = 'Lake 21';
+                document.querySelector('.jumbotron .lead').textContent = 'Lake 21 è un ebook fotografico straordinario che cattura la magica essenza della bellezza naturale e umana in una collezione affascinante. Questo photobook esclusivo presenta una serie di 40 fotografie mozzafiato, ognuna con la sua unica narrazione visiva, che ritraggono modelle in ambientazioni serene e pittoresche in riva a un lago. Ogni fotografia in Lake 21 è un capolavoro a sé, che esplora la relazione simbiotica tra donna e natura. Le modelle sono ritratte in pose che variano dal giocoso, al contemplativo e vivace, catturando una gamma di emozioni che risuonano con chiunque apprezzi la bellezza in tutte le sue forme. ACQUISTA ORA E NON TE NE PENTIRAI !!!!';
+                document.querySelector('.buy-now-button').textContent = 'Acquista ora: 38 EUR'
+                document.querySelector('.jumbotron .lead2').textContent = 'STRUTTURA: Il Photobook contiene un totale di 40 pagine con illustrazioni meravigliose, rendilo tuo, non perdere questa fantastica occasione !!!'
+                // Aggiorna qui il resto del contenuto per l'italiano
+            } else {
+                document.querySelector('.jumbotron h1').textContent = 'Lake 21';
+                document.querySelector('.jumbotron .lead').textContent = 'Lake 21 is an extraordinary photographic ebook that captures the essence of natural and human beauty in one fascinating collection. This exclusive photobook presents a series of 40 breathtaking photographs, each with its own unique visual narrative, depicting models in serene and picturesque settings by a lake. Each photograph in Lake 21 is a masterpiece in itself, exploring the symbiotic relationship between man and nature. The models are portrayed in poses ranging from the ethereal to the playful, the contemplative to the lively, capturing a range of emotions that resonate with anyone who appreciates beauty in all its forms. BUY NOW AND YOU WONT REGRET IT !!!!';
+                document.querySelector('.buy-now-button').textContent = 'Buy now: 38 EUR'
+                document.querySelector('.jumbotron .lead2').textContent = 'STRUCTURE: The Photobook contains a total of 40 pages with wonderful illustrations, make it yours, do not miss this fantastic opportunity !!!'
+                // Aggiorna qui il resto del contenuto per l'inglese
+            }
+        }
+    </script>
+</body>
+</html>
